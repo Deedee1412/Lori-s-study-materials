@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="nl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mind map Samenleving & economie</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+:root{--bg:#f6f9fb;--card:#fff;--ink:#14324a;--mut:#5a6e7e;--line:#c9d9e3;--on:#fff;--sch:55% 38%;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1b25;--card:#172733;--ink:#e6f0f6;--mut:#9db3c2;--line:#2a4050;--on:#0f1b25;--sch:60% 66%}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1b25;--card:#172733;--ink:#e6f0f6;--mut:#9db3c2;--line:#2a4050;--on:#0f1b25;--sch:60% 66%}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 "Atkinson Hyperlegible",system-ui,sans-serif}
+header{padding:22px 16px 6px;max-width:900px;margin:0 auto}
+h1{margin:0;font-size:clamp(1.5rem,5vw,2.1rem);line-height:1.15}
+main{max-width:900px;margin:0 auto;padding:8px 14px 60px}
+.mut{color:var(--mut);font-size:.92rem}
+svg{width:100%;height:auto;display:block;margin:6px auto;max-width:760px}
+svg text{fill:var(--ink);font-family:inherit}
+.rn{fill:hsl(var(--h) var(--sch));cursor:pointer}
+.rn:hover,g:focus .rn{stroke:var(--ink);stroke-width:3}
+g:focus{outline:none}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+button{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:7px 14px;cursor:pointer}
+button:focus-visible,summary:focus-visible,.nd:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+details.br{background:var(--card);border:2px solid hsl(var(--h) var(--sch));border-radius:12px;margin:12px 0;padding:0 14px 8px;--bc:hsl(var(--h) var(--sch))}
+summary{cursor:pointer;font-weight:700;font-size:1.1rem;padding:12px 0;display:flex;gap:10px;align-items:center}
+.num{background:var(--bc);color:var(--on);border-radius:50%;min-width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-size:.95rem}
+.mm,.mm ul{list-style:none;margin:0;padding:0}
+.mm ul{margin-left:14px;padding-left:18px;border-left:2px solid var(--bc)}
+.mm li{position:relative;padding:3px 0}
+.mm ul>li::before{content:"";position:absolute;left:-18px;top:18px;width:16px;border-top:2px solid var(--bc)}
+.nd{display:inline-block;padding:2px 11px;border-radius:14px;border:2px solid var(--bc);background:var(--card);line-height:1.4}
+.mm>li>.nd{background:var(--bc);color:var(--on);font-weight:700}
+li.p>.nd{cursor:pointer}
+li.p>.nd::after{content:" ▾"}li.p.c>.nd::after{content:" ▸"}
+li.c>ul{display:none}
+h2{font-size:1.3rem;margin:28px 0 8px}
+.fc{margin:12px 0}
+.fc>div{min-height:190px;display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;border-radius:14px;border:3px solid hsl(var(--h) var(--sch));background:var(--card);font-size:1.2rem;cursor:pointer}
+.fc>div.back{background:hsl(var(--h) var(--sch));color:var(--on)}
+select{font:inherit;color:var(--ink);background:var(--card);border:2px solid var(--line);border-radius:10px;padding:7px 10px;max-width:100%}
+.cen{justify-content:center}
+.gr{--dem:#1590b9;--sup:#a26200;--bad:#b3322c;margin:14px 0 6px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;align-items:start}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .gr{--dem:#4cb8dc;--sup:#f0b85a;--bad:#ff8a82}}
+:root[data-theme="dark"] .gr{--dem:#4cb8dc;--sup:#f0b85a;--bad:#ff8a82}
+.gr table{border-collapse:collapse;width:100%;margin-bottom:12px}
+.gr td,.gr th{border:1px solid var(--line);padding:6px 10px;text-align:left}
+.gr th{background:color-mix(in srgb,var(--bc) 18%,var(--card))}
+.gr svg{max-width:420px}
+@media print{.gr svg{display:block!important}}
+@media print{svg,.row,.noprint{display:none!important}body{background:#fff;color:#000}details.br{break-inside:avoid}}
+</style></head><body>
+<header><h1>Mind map: Samenleving & economie</h1>
+<p class="mut">Alle onderdelen van het vak in één overzicht, met de uitleg uit je cursus. Tik op een bol of op een tak om uit te klappen.</p></header>
+<main>
+<svg id="rad" viewBox="0 0 520 410" role="group" aria-label="Overzicht van de tien takken"></svg>
+<div class="row noprint"><button id="open">Alles uitklappen</button><button id="close">Alles inklappen</button><button id="tofc">Naar de flashcards ↓</button></div>
+<div id="br"></div>
+<section id="fcs" class="noprint"><h2>Flashcards</h2><p class="mut">Tik op de kaart om te draaien. De kleur van de kaart hoort bij de tak van de mind map.</p><div id="fcw"></div></section>
+<p class="mut">Afdrukken: kies Afdrukken in je browser, alle takken worden dan automatisch uitgeklapt.</p>
+</main>
+<script>
+const R=[
+['Ik ben wie ik ben',`
+-Soorten identiteit
+--Persoonlijke identiteit: wat jou uniek maakt
+---Biologische aspecten (leeftijd, lichaam, aangeboren eigenschappen)
+---Persoonlijkheidstrekken (eerlijk, sociaal, verlegen, zelfverzekerd, geduldig, creatief)
+---Familiale achtergrond (opvoeding, waarden en normen, taal, tradities)
+--Groepsidentiteit: groepen waarmee je je verbonden voelt
+---Regionaal · nationaal · supranationaal (West-Vlaming, Belg, Europeaan)
+---Groepen: gezin, vrienden, klas, school, sportclub, jeugdbeweging
+---Gendergerelateerde groepen
+---Sociaaleconomische groepen (inkomen, opleiding, beroep)
+---Levensbeschouwelijke groepen
+---Subculturen (muziek, mode, sport, gaming)
+-Identiteit is…
+--Relationeel: door relaties met anderen
+--Gelaagd: meerdere identiteiten tegelijk
+--Dynamisch: verandert doorheen de tijd
+-Persoonlijk en groep beïnvloeden elkaar
+--Persoonlijkheid bepaalt welke groepen je aantrekken
+--Groepen beïnvloeden je smaak, gedrag en denken
+-Lagen beïnvloeden elkaar
+--Familie → waarden → persoonlijkheid en keuzes → groepen → interesses en overtuigingen
+--Lagen kunnen elkaar versterken of tegenspreken
+-Factoren
+--Verbondenheid: je hoort erbij en voelt je geaccepteerd
+--Discriminatie: ongelijk of nadelig behandeld worden
+--Wij-zij-denken: eigen groep tegenover andere groep
+-Mensbeeld en wereldbeeld
+--Mensbeeld: hoe je denkt over de mens
+--Wereldbeeld: hoe je kijkt naar wereld en samenleving
+--Identiteit ↔ mensbeeld ↔ wereldbeeld
+--Wereldbeeld verandert door ervaringen, contacten, informatie en kennis
+-Welke laag is het meest bepalend? Dat verschilt per persoon en per periode`],
+['Samenleven met anderen',`
+-Diversiteit = mensen verschillen van elkaar
+--Verrijkend én uitdagend
+--Niet automatisch positief of negatief
+-Begrippen
+--Multiculturalisme: culturen naast elkaar, erkend
+--Monoculturalisme: één dominante cultuur
+--Integratie: meedoen en eigen kenmerken behouden
+--Inclusie: iedereen hoort erbij
+--Exclusie: uitsluiting
+-Vormen
+--Lichaamsdiversiteit (leeftijd, bouw, huidskleur, mogelijkheden)
+--Sociale diversiteit (opleiding, beroep, inkomen)
+--Culturele diversiteit (taal, tradities, eten, muziek)
+--Religieuze en levensbeschouwelijke diversiteit
+--Seksuele diversiteit
+-Voordelen
+--Culturele verrijking
+--Uitwisselen van ideeën
+--Economische uitwisseling
+-Uitdagingen
+--Meningsverschillen
+--Verschillende belangen
+--Referentiekaders (ervaringen, kennis, waarden, normen)
+--Groepsdenken
+--Risico van uitsluiting
+-Respectvol en constructief samenleven
+--Communicatie: constructief of destructief?
+--Pesten, uitsluiting, discriminatie, racisme: impact en handelingsopties
+--Grenzen en groepsdruk
+--Geldige toestemming (consent)
+---Vrijwillig: zonder druk of dwang
+---Duidelijk: expliciet of ondubbelzinnig
+---Geïnformeerd
+---Specifiek
+---Actueel
+---Bekwaam gegeven
+--Formele en informele context
+--Samenwerken en verantwoordelijkheid`],
+['Noodsituatie',`
+-Veiligheid: bij echte nood roep je hulp in, en volg je de 112-operator en de AED
+-Noodsituaties en symptomen
+--Bloeding (bleekheid, zwakte)
+--Hart- en ademhalingsstilstand (reageert niet, ademt niet normaal)
+--Botbreuk: bot beschadigd, soms abnormale stand
+--Kneuzing: weefsel beschadigd door slag, blauwe huid
+--Ontwrichting: gewricht uit positie
+--Verstuiking: banden rond gewricht beschadigd
+--Verdrinking: ademhalingsproblemen, bewustzijnsverlies
+--Verslikking: gedeeltelijk (hoest, spreekt) of ernstig (kan niet ademen, grijpt naar keel)
+--Huidwonde · brandwonde (hitte, vuur, stoom, chemische stof)
+-6 basisprincipes
+--1 Blijf rustig
+--2 Vermijd besmetting (handschoenen, handen wassen)
+--3 Handel als eerstehulpverlener (je bent geen dokter)
+--4 Zorg voor comfort van het slachtoffer
+--5 Verleen psychosociale hulp (luisteren, geruststellen)
+--6 Houd rekening met emotionele reacties achteraf
+-4 stappen
+--1 Zorg voor veiligheid
+--2 Beoordeel de toestand
+--3 Raadpleeg gespecialiseerde hulp
+---Wat, waar, hoeveel slachtoffers, toestand
+--4 Verleen verdere eerste hulp
+-Noodnummers
+--101 politie
+--112 ziekenwagen en brandweer
+--070 245 245 antigifcentrum
+--1733 huisarts of wachtpost
+-Reanimatie in 6 stappen
+--1 Bewusteloos? Reageert niet, ademt niet normaal
+--2 Bel 112 (luidspreker)
+--3 AED laten halen
+--4 Borstcompressies
+---Op harde, vlakke ondergrond
+---100–120 per minuut, 5–6 cm diep
+--5 Beademing: 30 compressies, 2 beademingen
+---Geen beademing? Ononderbroken compressies
+--6 Doorgaan tot de ambulance arriveert en de ambulancier overneemt
+-AED: volg de gesproken instructies
+-Hulpmiddelen: handschoenen, verbanddoos, kompressen, verband, reddingsdeken, AED`],
+['Sociaal rechtvaardige samenleving',`
+-Inkomsten overheid
+--Directe belastingen: op inkomen of bezit
+---Bedrijfsvoorheffing, onroerende voorheffing
+--Indirecte belastingen: bij het kopen
+---Btw, accijnzen, milieubelasting
+--Diverse inkomsten: boetes, vergoedingen voor diensten
+--Overheidskapitaal: gronden en gebouwen verkopen of verhuren
+-Uitgaven overheid
+--Collectieve behoeften (veiligheid, onderwijs, openbaar vervoer)
+--Economische groei (wegen, digitale infrastructuur, duurzaamheid)
+--Maatschappelijk leven (cultuur, sport, subsidies voor isolatie, infocampagnes)
+--Sociale uitgaven (sociale zekerheid, sociale woningen, armoede)
+-Sociale zekerheid
+--Bescherming tegen ziekte, werkloosheid, arbeidsongeval en ouderdom
+--Steunt op solidariteit
+--RSZ int en beheert de sociale bijdragen
+---Werkgevers · werknemers · overheid
+--Uitkeringen
+---Arbeidsongeval · beroepsziekte
+---Rust- en overlevingspensioen
+---Werkloosheid · ziekte en invaliditeit
+---Jaarlijks vakantiegeld · groeipakket
+--Vervangingsinkomen: vervangt inkomen uit arbeid
+--Aanvullend inkomen: komt erbovenop (groeipakket)
+-Herverdeling
+--Fiscaal
+---Progressieve personenbelasting (belastingschijven)
+---Vrijstellingen en kortingen
+---Heffingen op vermogen · extra vergoedingen
+---Indirecte belastingen met verschillende tarieven
+--Sociaal
+---Sociale bijstand (leefloon)
+---Sociale woningen en huurpremies
+---Energiepremies en renovatiesteun
+---Studiebeurzen · verhoogde tegemoetkoming
+---Groeipakket · mobiliteitskortingen · kansentarieven`],
+['Prijsvorming op de markt',`
+-Vraag en aanbod
+--Vrager (consument) · aanbieder (producent, verkoper)
+--Vraag = wat consumenten willen en kunnen kopen
+--Aanbod = wat producenten willen en kunnen verkopen
+-Curves
+--Vraagcurve daalt
+--Aanbodcurve stijgt
+--Voorbeeld: bij 5 euro is vraag = aanbod = 50
+-Evenwicht: evenwichtsprijs en -hoeveelheid
+--Overschot (prijs te hoog) · tekort (prijs te laag)
+--Bij 8 euro: overschot 60 · bij 2 euro: tekort 60
+-Beweging vs. verschuiving
+--Beweging op de curve: de prijs verandert
+--Verschuiving van de curve: een andere factor
+-Verschuiving van de vraag
+--Naar rechts: hoger inkomen, populairder, meer consumenten, duurder vervangproduct
+--Naar links: lager inkomen, minder populair, minder consumenten, goedkoper vervangproduct
+-Verschuiving van het aanbod
+--Naar rechts: lagere kosten, betere technologie, subsidies, meer producenten
+--Naar links: hogere kosten, duurdere grondstoffen, hogere belastingen, minder producenten, slecht weer
+-Effect op het evenwicht
+--Vraag rechts: prijs ↑ hoeveelheid ↑ · vraag links: beide ↓
+--Aanbod rechts: prijs ↓ hoeveelheid ↑ · aanbod links: prijs ↑ hoeveelheid ↓
+-Overheid grijpt in
+--Btw en accijnzen: duurder, minder vraag
+--Premies en subsidies: goedkoper, meer vraag
+--Minimumprijs boven evenwicht: aanbodoverschot
+--Maximumprijs onder evenwicht: tekort`],
+['Ik ga werken',`
+-Arbeidsovereenkomst = arbeid + gezag + loon
+--Belang voor de werknemer: zekerheid en bescherming
+--Belang voor de werkgever: duidelijke afspraken
+--Aard: arbeider (handarbeid) · bediende (hoofdarbeid)
+--Duur
+---Bepaald: begin- en einddatum
+---Onbepaald: geen einddatum
+---Vervanging: tot de afwezige terugkeert
+---Welomschreven werk: tot het werk af is
+--Omvang
+---Voltijds (vaak 38 uur per week)
+---Deeltijds (minder uren, niet automatisch halftijds)
+-Overeenkomst vs. reglement
+--Overeenkomst: individueel (werk, loon, uren, duur)
+--Reglement: algemene regels (uren, pauzes, vakantie, loonuitbetaling)
+-Rechten en plichten
+--Werknemer: loon, veilig werk, rust en vakantie, sociale bescherming, respect
+--Werknemer moet: werk uitvoeren, instructies volgen, op tijd komen, zorgvuldig zijn, geheimhouden
+--Werkgever mag: werk eisen, instructies geven, controleren
+--Werkgever moet: loon betalen, middelen geven, veiligheid, respect, wetgeving en bijdragen naleven
+-Welzijn en veiligheid
+--Preventie · persoonlijke beschermingsmiddelen (helm, schoenen, bril, gehoorbescherming, handschoenen)
+--Ergonomie · eerste hulp en noodprocedures
+--Arbeidshygiëne · psychosociaal welzijn · opleiding
+-Van bruto naar netto
+--Brutoloon
+--− RSZ-bijdrage = belastbaar loon
+--− Bedrijfsvoorheffing (voorschot op personenbelasting)
+--= Nettoloon
+--Extralegale voordelen: maaltijdcheques, ecocheques, bedrijfswagen, groepsverzekering
+--Student: solidariteitsbijdrage, vaak geen bedrijfsvoorheffing
+--Gezinssituatie beïnvloedt de bedrijfsvoorheffing
+-Arbeidssituaties
+--Einde contract (ontslag, onderling akkoord, einde bepaalde duur)
+--Proefperiode studenten: eerste 3 effectieve werkdagen
+--Schorsing: tijdelijk onderbroken, contract blijft bestaan
+--Nachtarbeid: verbod, uitzonderingen, voorwaarden
+--Loonnormen en uitbetaling van het loon
+--Overwerk = extra uren · overloon = extra betaling
+-Bronmateriaal
+--Overeenkomst · reglement · krantenartikel · brochure · loonfiche · wettekst
+--Wie, wat, wanneer, welke regels? Feit of mening?
+-Instanties
+--CPBW: welzijn en veiligheid
+--RSZ: sociale bijdragen
+--RVA: werkloosheid
+--student@work: studentenarbeid
+--Vakbonden: loon, ontslag, rechten
+--VDAB: werk zoeken en opleidingen`],
+['Ik beheer mijn financiën',`
+-Totale aankoopkost
+--Prijs − commerciële korting
+--+ bijkomende kosten (eenmalig · terugkerend)
+--+ btw
+--Voorbeeld laptop: 1.000 → 900 → 925 → totaal 1.119,25
+-Verkoopovereenkomst
+--Koper: product, kwaliteit, garantie, betalen
+--Verkoper: betaling krijgen, juiste info, garantie
+-Consumentenkrediet
+--Verkoop op afbetaling
+--Lening op afbetaling (vast bedrag, vaste termijnen)
+--Kredietopening (kaart, debetstand)
+--Financieringshuur of leasing
+--Begrippen: looptijd · rente · rentevoet · extra kosten · totale kost · afbetalingsbedrag
+--JKP: totale jaarlijkse kost van het krediet
+--Meerprijs = totale terugbetaling − contante prijs
+---Voorbeeld: 12 × 95 = 1.140 → meerprijs 140
+--Risico’s: budget onder druk, achterstand, schulden
+--Maatregelen: budget maken, niet meer uitgeven dan je hebt, sparen, vergelijken, tijdig betalen, reserve
+-Budget
+--Inkomsten: terugkerend (loon, zakgeld) · toevallig (cadeau, prijs)
+--Uitgaven: vast · variabel · onvoorzien · uitzonderlijk
+--Inkomsten − uitgaven = sparen
+--Evenwicht · tekort · overschot
+--Aankoopkeuze: aankoopkost, duurzaamheid, financieringskost, inflatie, noodzaak, spaarbuffer, terugbetalingscapaciteit
+--Administratie: aankoopbewijs, garantiebewijs, rekeninguittreksel, polis, loonstrook
+-Sparen en beleggen
+--Zichtrekening: betalen
+--Spaarrekening: sparen met rente
+--Termijnrekening: vastzetten, hogere rente
+--Enkelvoudige vs. samengestelde rente
+--Obligatie: lening, vaste rente
+--Aandeel: deel van een bedrijf, dividend
+--Beleggingsfonds: spreiding
+--Cryptomunt: zeer hoog risico
+--Inflatie: koopkracht daalt
+--Kiezen: duur · rente en inflatie · risico · doel · kennis`],
+['Ik ben verzekerd',`
+-Verantwoordelijkheid: instaan voor je gedrag
+-Aansprakelijkheid: schade wettelijk vergoeden
+-Belang: schade kan veel geld kosten
+-Schadeaangifte
+--Datum en uur · aard van de schade
+--Getuige · verantwoordelijke
+--Aansprakelijke · begunstigde
+--Feiten eerlijk beschrijven, bewijs toevoegen
+-Verzekeringen
+--Auto (burgerlijke aansprakelijkheid verplicht)
+--Bromfiets
+--Brand (woning, inboedel)
+--Familiale (schade aan anderen)
+--Rechtsbijstand (advocaat)
+--Hospitalisatie (ziekenhuiskosten)
+-Polis
+--Verzekeringsnemer: sluit af en betaalt de premie
+--Verzekeraar
+--Verzekerde
+--Schadevergoeding
+--Franchise: eigen aandeel
+--Premie
+--Verzekerd risico
+-Betaalt alleen binnen de dekking en voorwaarden van de polis`],
+['Ik ben digitaal vaardig',`
+-Word
+--Tekenopmaak: lettertype, grootte, vet, cursief, onderstrepen, kleur, markeren, super- en subscript, doorhalen
+--Alineaopmaak: regelafstand, uitlijning, inspringen, tekstdoorloop
+--Opsomming · paginaopmaak (marges, afdrukstand, formaat)
+--Kop- en voettekst · paginanummering
+--Tabellen: randen, arcering, rijen en kolommen, samenvoegen
+--Afdrukken · opslaan als PDF
+-Excel
+--Cel · celadres · bereik · rij · kolom · werkblad · werkmap
+--Opmaak · bewerken · vulgreep · getalnotatie
+--Formules en operatoren
+--Absolute en relatieve adressering
+--SOM · GEMIDDELDE · MIN · MAX
+--VERT.ZOEKEN · ALS
+--Voorwaardelijke opmaak
+--Grafieken: kolom, lijn, staaf, cirkel, spreiding
+-PowerPoint
+--Dia’s invoegen, indeling, opmaak, verwijderen, dupliceren
+--Overgangen en animaties
+--Tekstvakken en vormen
+--Hyperlink · actieknop
+--Diavoorstelling · hand-outs · notitiepagina’s
+--Bestandsindelingen (pptx, ppsm)
+-Regels
+--Auteursrecht: toestemming of licentie, bron vermelden
+--Creative commons: naamsvermelding, niet-commercieel, geen afgeleiden, gelijk delen
+--Cyberpesten: niet meedoen, bewijs bewaren, blokkeren, melden, steun zoeken
+--Wachtwoorden: lang, uniek, multifactor, niet delen
+--Nepnieuws: auteur, datum, bron, bewijs, doel
+--Phishing: afzender, domein, taal, urgentie, links; melden
+--Portretrecht: een foto maken is niet hetzelfde als publiceren
+--Privacy: doelgericht, minimaal, veilig
+--Netiquette: respectvol, duidelijk, denk na voor je publiceert`],
+['Het examen',`
+-Digitaal: gesloten en open vragen
+--Invul-, sleep-, dropdown- en meerkeuzevragen
+--Bronnen: video, foto’s, tekst
+-Geen giscorrectie
+-Hulpmiddelen: rekenapp · spelcontrole · woordenboek
+-Examencentrum Brussel
+--Identiteitskaart mee
+--Persoonlijke spullen in een locker
+--Gsm en samenvattingen = examenfraude
+--Balpen, kladpapier en hoofdtelefoon krijg je
+-Bronnen verwerken: wie, wat, wanneer, welke regels, betrouwbaar?`]];
+const SHORT=['Identiteit','Samenleven','Noodsituatie','Sociaal','Markt','Werken','Financiën','Verzekerd','Digitaal','Examen'];
+function parse(s){const root={k:[]},st=[root];s.trim().split('\n').forEach(l=>{const m=l.match(/^(-+)\s*(.*)$/),d=m[1].length,n={t:m[2].trim(),k:[]};while(st.length>d)st.pop();st[st.length-1].k.push(n);st.push(n)});return root.k}
+const nd=(n,d)=>`<li class="${n.k.length?'p'+(d>=2?' c':''):''}"><span class="nd"${n.k.length?' tabindex="0" role="button"':''}>${n.t}</span>${n.k.length?'<ul>'+n.k.map(x=>nd(x,d+1)).join('')+'</ul>':''}</li>`;
+const $=s=>document.querySelector(s);
+$('#br').innerHTML=R.map(([t,s],i)=>`<details class="br" id="b${i}" style="--h:${i*36}"${i===0?' open':''}><summary><span class="num">${i+1}</span>${t}</summary><ul class="mm">${parse(s).map(x=>nd(x,1)).join('')}</ul></details>`).join('');
+$('#b4').insertAdjacentHTML('beforeend',`<div class="gr"><div><p><b>Vraag en aanbod</b></p><svg viewBox="0 0 320 230" role="img" aria-label="Vraag en aanbod: evenwicht bij prijs 5 euro en hoeveelheid 50, overschot 60 bij 8 euro, tekort 60 bij 2 euro"><line x1="40" y1="190" x2="290" y2="190" stroke="var(--mut)"/><line x1="40" y1="20" x2="40" y2="190" stroke="var(--mut)"/><polyline points="232,156 184,122 160,105 136,88 88,54" fill="none" stroke="var(--dem)" stroke-width="3"/><polyline points="88,156 136,122 160,105 184,88 232,54" fill="none" stroke="var(--sup)" stroke-width="3"/><line x1="40" y1="105" x2="160" y2="105" stroke="var(--mut)" stroke-dasharray="4"/><line x1="160" y1="105" x2="160" y2="190" stroke="var(--mut)" stroke-dasharray="4"/><line x1="88" y1="54" x2="232" y2="54" stroke="var(--bad)" stroke-dasharray="3"/><line x1="88" y1="156" x2="232" y2="156" stroke="var(--bad)" stroke-dasharray="3"/><circle cx="160" cy="105" r="5" fill="var(--ink)"/><text x="184" y="110">E (€5 ; 50)</text><text x="236" y="164" font-weight="700">V</text><text x="236" y="52" font-weight="700">A</text><text x="118" y="47">overschot 60 (€8)</text><text x="122" y="172">tekort 60 (€2)</text><text x="20" y="159">2</text><text x="20" y="108">5</text><text x="20" y="57">8</text><text x="84" y="204">20</text><text x="156" y="204">50</text><text x="228" y="204">80</text><text x="125" y="222">Hoeveelheid</text><text x="4" y="14">Prijs (€)</text></svg><p class="mut">V = vraagcurve (daalt). A = aanbodcurve (stijgt). E = evenwicht.</p></div><div><p><b>Verschuivingen</b></p><table><tr><th>Verschuiving</th><th>Prijs</th><th>Hoeveelheid</th></tr><tr><td>Vraag rechts</td><td>↑</td><td>↑</td></tr><tr><td>Vraag links</td><td>↓</td><td>↓</td></tr><tr><td>Aanbod rechts</td><td>↓</td><td>↑</td></tr><tr><td>Aanbod links</td><td>↑</td><td>↓</td></tr></table><p><b>Cijfers bij de grafiek</b></p><table><tr><th>Prijs (€)</th><th>Vraag</th><th>Aanbod</th><th>Gevolg</th></tr><tr><td>2</td><td>80</td><td>20</td><td>tekort 60</td></tr><tr><td>4</td><td>60</td><td>40</td><td>tekort 20</td></tr><tr><td>5</td><td>50</td><td>50</td><td>evenwicht</td></tr><tr><td>6</td><td>40</td><td>60</td><td>overschot 20</td></tr><tr><td>8</td><td>20</td><td>80</td><td>overschot 60</td></tr></table></div></div>`);
+const cx=260,cy=205;let g=`<circle cx="${cx}" cy="${cy}" r="54" fill="var(--card)" stroke="var(--ink)" stroke-width="3"/><text x="${cx}" y="${cy-4}" text-anchor="middle" font-size="14" font-weight="700">Samenleving</text><text x="${cx}" y="${cy+14}" text-anchor="middle" font-size="14" font-weight="700">& economie</text>`;
+let lines='',nodes='';
+R.forEach(([t],i)=>{const a=(-90+i*36)*Math.PI/180,x=cx+175*Math.cos(a),y=cy+140*Math.sin(a),c=Math.cos(a);
+const side=c>0.3?'start':c<-0.3?'end':'middle',lx=side==='start'?x+30:side==='end'?x-30:x,ly=side==='middle'?(y<cy?y-32:y+44):y+5;
+lines+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="var(--line)" stroke-width="3"/>`;
+nodes+=`<g tabindex="0" role="button" aria-label="${t}" data-i="${i}" style="--h:${i*36}"><circle class="rn" cx="${x}" cy="${y}" r="24"/><text x="${x}" y="${y+6}" text-anchor="middle" font-size="17" font-weight="700" style="fill:var(--on);pointer-events:none">${i+1}</text><text x="${lx}" y="${ly}" text-anchor="${side}" font-size="14" font-weight="700">${SHORT[i]}</text></g>`});
+$('#rad').innerHTML=lines+g+nodes;
+function pick(i){const d=$('#b'+i);d.open=true;d.scrollIntoView({behavior:'smooth',block:'start'})}
+$('#rad').addEventListener('click',e=>{const n=e.target.closest('g[data-i]');if(n)pick(+n.dataset.i)});
+$('#rad').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const n=e.target.closest('g[data-i]');if(n){e.preventDefault();pick(+n.dataset.i)}}});
+function tog(el){const li=el.closest('li.p');if(li)li.classList.toggle('c')}
+$('#br').addEventListener('click',e=>{const n=e.target.closest('.nd');if(n)tog(n)});
+$('#br').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('nd')){e.preventDefault();tog(e.target)}});
+$('#open').onclick=()=>{document.querySelectorAll('details.br').forEach(d=>d.open=true);document.querySelectorAll('li.c').forEach(l=>l.classList.remove('c'))};
+$('#close').onclick=()=>{document.querySelectorAll('details.br').forEach(d=>d.open=false);document.querySelectorAll('li.p').forEach(l=>l.classList.add('c'))};
+const FC=[
+[0,'Persoonlijke vs. groepsidentiteit','Persoonlijk: wat jou uniek maakt (biologie, persoonlijkheid, familie). Groep: groepen waarmee je je verbonden voelt.'],
+[0,'Relationeel, gelaagd, dynamisch','Relationeel: door relaties. Gelaagd: meerdere identiteiten tegelijk. Dynamisch: verandert in de tijd.'],
+[0,'Drie factoren die identiteit beïnvloeden','Verbondenheid, discriminatie, wij-zij-denken.'],
+[0,'Mensbeeld vs. wereldbeeld','Mensbeeld: hoe je denkt over de mens. Wereldbeeld: hoe je kijkt naar de wereld en samenleving.'],
+[0,'Wat is wij-zij-denken?','Onderscheid tussen eigen groep en andere groep: versterkt je groep, maar kan vooroordelen en uitsluiting geven.'],
+[1,'Vijf begrippen over samenleven in diversiteit','Multiculturalisme, monoculturalisme, integratie, inclusie, exclusie.'],
+[1,'Multiculturalisme vs. monoculturalisme','Multi: culturen naast elkaar en erkend. Mono: één dominante cultuur.'],
+[1,'Integratie vs. inclusie','Integratie: meedoen en eigen kenmerken behouden. Inclusie: iedereen hoort erbij en kan deelnemen.'],
+[1,'Vijf vormen van diversiteit','Lichaams-, sociale, culturele, religieuze/levensbeschouwelijke en seksuele diversiteit.'],
+[1,'Voordelen en uitdagingen van diversiteit','Voordelen: culturele verrijking, ideeën uitwisselen, economische uitwisseling. Uitdagingen: meningsverschillen, belangen, referentiekaders, groepsdenken, uitsluiting.'],
+[1,'Wat is een referentiekader?','Ervaringen, kennis, waarden en normen waarmee je naar de wereld kijkt.'],
+[1,'Zes kenmerken van geldige toestemming','Vrijwillig, duidelijk, geïnformeerd, specifiek, actueel, bekwaam gegeven.'],
+[2,'De 4 stappen van eerste hulp','Veiligheid, toestand beoordelen, gespecialiseerde hulp raadplegen, verdere eerste hulp.'],
+[2,'De 6 basisprincipes','Rustig blijven, besmetting vermijden, handelen als eerstehulpverlener, comfort, psychosociale hulp, emotionele reacties achteraf.'],
+[2,'Noodnummers','101 politie. 112 ziekenwagen en brandweer. 070 245 245 antigifcentrum. 1733 huisarts of wachtpost.'],
+[2,'Botbreuk, kneuzing, ontwrichting, verstuiking','Bot beschadigd. Weefsel door slag. Gewricht uit positie. Banden rond gewricht beschadigd.'],
+[2,'Wat geef je door aan 112?','Wat er gebeurd is, waar, hoeveel slachtoffers en hun toestand.'],
+[2,'Reanimatie: de 6 stappen','Bewusteloos? 112 bellen. AED halen. Borstcompressies. Beademing. Doorgaan tot de ambulance overneemt.'],
+[2,'Compressies en beademing','100–120 per minuut, 5–6 cm diep. 30 compressies, dan 2 beademingen. Geen beademing? Ononderbroken compressies.'],
+[3,'Directe vs. indirecte belasting','Direct: op inkomen of bezit (bedrijfsvoorheffing). Indirect: bij het kopen (btw, accijnzen).'],
+[3,'Vier inkomstenbronnen van de overheid','Directe belastingen, indirecte belastingen, diverse inkomsten (boetes), overheidskapitaal.'],
+[3,'Vier soorten overheidsuitgaven','Collectieve behoeften, economische groei, maatschappelijk leven, sociale uitgaven.'],
+[3,'Wie financiert de RSZ?','Werkgevers, werknemers en de overheid.'],
+[3,'Vervangingsinkomen vs. aanvullend inkomen','Vervangingsinkomen vervangt arbeidsinkomen (werkloosheid, ziekte, pensioen). Aanvullend komt erbovenop (groeipakket).'],
+[3,'Wat is herverdeling?','De overheid beperkt ongelijkheid via belastingen (fiscaal) en sociale maatregelen (sociaal).'],
+[3,'Progressieve personenbelasting','Wie meer verdient, betaalt een groter percentage, via belastingschijven.'],
+[4,'Evenwichtsprijs','De prijs waarbij vraag gelijk is aan aanbod.'],
+[4,'Beweging vs. verschuiving','Beweging: prijs verandert. Verschuiving: andere factor (inkomen, kosten, smaak).'],
+[4,'Prijs boven evenwicht geeft…','Een overschot. Onder het evenwicht: een tekort.'],
+[4,'Vraag naar rechts: gevolg','Prijs en hoeveelheid stijgen. Vraag naar links: beide dalen.'],
+[4,'Aanbod naar rechts: gevolg','Prijs daalt, hoeveelheid stijgt. Aanbod naar links: prijs stijgt, hoeveelheid daalt.'],
+[4,'Minimumprijs en maximumprijs','Minimumprijs boven evenwicht: aanbodoverschot. Maximumprijs onder evenwicht: tekort.'],
+[5,'Drie kenmerken van een arbeidsovereenkomst','Arbeid, gezag, loon.'],
+[5,'Arbeider vs. bediende','Arbeider: vooral handarbeid. Bediende: vooral hoofdarbeid.'],
+[5,'Soorten duur van een arbeidsovereenkomst','Bepaald, onbepaald, vervanging, welomschreven werk.'],
+[5,'Overeenkomst vs. reglement','Overeenkomst: individueel. Reglement: algemene regels voor het hele bedrijf.'],
+[5,'Van bruto naar netto','Brutoloon − RSZ-bijdrage − bedrijfsvoorheffing = nettoloon.'],
+[5,'Proefperiode bij studenten','De eerste 3 effectieve werkdagen: stoppen zonder opzeg of vergoeding.'],
+[5,'Overwerk vs. overloon','Overwerk: extra uren. Overloon: extra betaling voor bepaalde overuren.'],
+[5,'CPBW, RSZ, RVA, VDAB','CPBW: veiligheid. RSZ: sociale bijdragen. RVA: werkloosheid. VDAB: werk en opleiding.'],
+[6,'Totale aankoopkost','Prijs na korting + bijkomende kosten + btw.'],
+[6,'Meerprijs','Totale terugbetaling − contante prijs. Bv. 12 × 95 = 1.140; prijs 1.000; meerprijs 140.'],
+[6,'Vier soorten consumentenkrediet','Verkoop op afbetaling, lening op afbetaling, kredietopening, leasing.'],
+[6,'Rentevoet vs. JKP','Rentevoet: alleen de rente. JKP: alle kosten samen, per jaar.'],
+[6,'Budgetformule','Inkomsten − uitgaven = sparen.'],
+[6,'Vier soorten uitgaven','Vast, variabel, onvoorzien, uitzonderlijk.'],
+[6,'Zicht-, spaar- en termijnrekening','Betalen; sparen met rente; vastzetten tegen hogere rente.'],
+[6,'Obligatie, aandeel, fonds, cryptomunt','Obligatie: lening. Aandeel: deel van een bedrijf. Fonds: spreiding. Cryptomunt: zeer hoog risico.'],
+[7,'Verantwoordelijk vs. aansprakelijk','Verantwoordelijk: instaan voor je gedrag. Aansprakelijk: wettelijk schade moeten vergoeden.'],
+[7,'Franchise','Het bedrag dat je bij schade zelf betaalt.'],
+[7,'Verzekeringsnemer vs. verzekerde','Nemer: sluit af en betaalt de premie. Verzekerde: wie gedekt is.'],
+[7,'Familiale verzekering','Dekt schade die jij of een gezinslid per ongeluk aan anderen veroorzaakt.'],
+[7,'Schadeaangifte: wat vermeld je?','Datum en uur, aard van de schade, getuige, verantwoordelijke, aansprakelijke, begunstigde.'],
+[8,'Absolute vs. relatieve celverwijzing','Absoluut ($A$1) blijft vast bij kopiëren. Relatief (A1) schuift mee.'],
+[8,'Creative commons: voorwaarden','Naamsvermelding, niet-commercieel, geen afgeleiden, gelijk delen.'],
+[8,'Phishing','Nepberichten die je gegevens proberen te stelen. Niet klikken, melden.'],
+[8,'Nepnieuws herkennen','Controleer auteur, datum, bron, bewijs en doel.'],
+[8,'Portretrecht','Een foto maken en publiceren zijn verschillende handelingen.'],
+[9,'Hulpmiddelen op het examen','Rekenapp, spelcontrole en eenvoudig woordenboek.'],
+[9,'Wat is examenfraude?','Een gsm, smartwatch of samenvatting bij je hebben in de examenruimte.']];
+let deck=[],ix=0,side=0,known=new Set(),filt='all';
+function fcInit(){deck=FC.map((_,i)=>i).filter(i=>filt==='all'||FC[i][0]===+filt);ix=0;side=0;known=new Set();fcDraw()}
+function fcDraw(){const c=FC[deck[ix]],kn=deck.filter(k=>known.has(k)).length;
+$('#fcw').innerHTML=`<div class="row cen"><select id="fsel" aria-label="Onderwerp"><option value="all">Alle onderwerpen</option>${R.map((r,i)=>`<option value="${i}"${String(i)===filt?' selected':''}>${i+1}. ${r[0]}</option>`).join('')}</select></div><p class="mut" style="text-align:center">Kaart ${ix+1} van ${deck.length} · gekend: ${kn}</p><div class="fc" style="--h:${c[0]*36}"><div class="${side?'back':''}" id="card" tabindex="0" role="button" aria-label="Draai de kaart">${side?c[2]:c[1]}</div></div><div class="row cen"><button id="pv">Vorige</button><button id="nx">Volgende</button><button id="kn">Ik ken dit</button></div><div class="row cen"><button id="sh">Schudden</button><button id="rt">Opnieuw</button></div>`;
+const flip=()=>{side^=1;fcDraw()};$('#card').onclick=flip;$('#card').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();flip()}};
+$('#pv').onclick=()=>{ix=(ix+deck.length-1)%deck.length;side=0;fcDraw()};$('#nx').onclick=()=>{ix=(ix+1)%deck.length;side=0;fcDraw()};
+$('#kn').onclick=()=>{known.add(deck[ix]);ix=(ix+1)%deck.length;side=0;fcDraw()};
+$('#sh').onclick=()=>{deck.sort(()=>Math.random()-.5);ix=0;side=0;fcDraw()};$('#rt').onclick=fcInit;
+$('#fsel').onchange=e=>{filt=e.target.value;fcInit()}}
+fcInit();
+$('#tofc').onclick=()=>$('#fcs').scrollIntoView({behavior:'smooth'});
+window.addEventListener('beforeprint',()=>$('#open').click());
+</script></body></html>
