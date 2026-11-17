@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Samenleving en economie</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --card: #fff;
+    --tx: #1d1d22;
+    --mu: #55555f;
+    --bd: #e3e0d8;
+    --ex: #fff6dd;
+    --on-a: #fff;
+    --a: #1d6fc4;
+    --tint: #e5f0fb;
+    --base: 19px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16161a;
+      --card: #202027;
+      --tx: #f1f0ec;
+      --mu: #b5b4bd;
+      --bd: #34343e;
+      --ex: #3a3320;
+      --on-a: #16161a;
+      --a: #7db9f5;
+      --tint: #1a2e45;
+    }
+  }
+  html.big { --base: 22px; }
+
+  * { box-sizing: border-box; }
+  html { font-size: var(--base); -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: "Atkinson Hyperlegible", Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--tx);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    word-spacing: 0.06em;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px 96px;
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--tx);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 24px;
+    font-size: 0.9rem;
+  }
+  .size-btn, .home {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 16px;
+    background: var(--card);
+    color: var(--tx);
+    border: 2px solid var(--bd);
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .size-btn:hover, .home:hover { border-color: var(--tx); }
+
+  h1 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.7rem, 7vw, 2.6rem);
+    hyphens: auto;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    margin: 32px 0 14px;
+  }
+  .intro {
+    color: var(--mu);
+    font-size: 1.05rem;
+    max-width: 30em;
+    margin: 0;
+  }
+  h2 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin: 48px 0 4px;
+  }
+  .h2-sub { color: var(--mu); margin: 0 0 14px; font-size: 0.95rem; }
+
+  .list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    min-height: 64px;
+    padding: 12px 18px;
+    background: var(--card);
+    border: 2px solid var(--bd);
+    border-radius: 10px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .list a:hover { border-color: var(--a); }
+  .list b { display: block; }
+  .list .desc { display: block; color: var(--mu); font-size: 0.9rem; }
+  .list .arrow { font-size: 1.3rem; font-weight: 700; color: var(--a); }
+
+  .note {
+    background: var(--ex);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 48px;
+  }
+  .note b { display: block; }
+  .note p { margin: 4px 0 0; }
+
+  @media (max-width: 540px) {
+    html { --base: 18px; }
+    html.big { --base: 21px; }
+    main { padding: 0 16px 80px; }
+    h1 { margin-top: 24px; }
+  }
+</style>
+<link rel="stylesheet" href="../assets/luisteren.css">
+</head>
+<body>
+<main>
+  <div class="topbar">
+    <a class="home" href="../index.html">&larr; Alle vakken</a>
+    <button class="size-btn" id="sizeBtn" type="button" aria-pressed="false">Tekst groter</button>
+  </div>
+
+  <h1>Samenleving en economie</h1>
+  <p class="intro">Begin met de mind map voor het overzicht. Luister daarna de blokken, één per keer.</p>
+
+  <h2>Overzicht</h2>
+  <p class="h2-sub">Alle onderdelen van het vak op één pagina.</p>
+  <ul class="list">
+    <li><a href="Mind%20map%20Samenleving%20%26%20economie.html"><span><b>Mind map en flashcards</b><span class="desc">Tik op een tak om uit te klappen. Onderaan staan de flashcards.</span></span><span class="arrow">&rarr;</span></a></li>
+  </ul>
+
+  <section class="listen" id="luister">
+    <h2>Luisteren</h2>
+    <p class="listen-sub">9 blokken, samen ongeveer 21 minuten. Luister elk blok 3 keer, op verschillende dagen. De bolletjes tellen mee.</p>
+    <!--
+      NIEUW AUDIOBLOK: zet de mp3 in de map audio en voeg hieronder één regel toe.
+    -->
+    <ol class="tracks">
+      <li><a href="audio/Blok%201%20Ik%20ben%20wie%20ik%20ben.mp3" data-dur="2:11">Ik ben wie ik ben</a></li>
+      <li><a href="audio/Blok%202%20Samenleven%20met%20anderen.mp3" data-dur="2:10">Samenleven met anderen</a></li>
+      <li><a href="audio/Blok%203%20Ik%20reageer%20correct%20in%20een%20noodsituatie.mp3" data-dur="2:47">Ik reageer correct in een noodsituatie</a></li>
+      <li><a href="audio/Blok%204%20Een%20sociaal%20rechtvaardige%20samenleving.mp3" data-dur="2:01">Een sociaal rechtvaardige samenleving</a></li>
+      <li><a href="audio/Blok%205%20Prijsvorming%20op%20de%20markt.mp3" data-dur="2:20">Prijsvorming op de markt</a></li>
+      <li><a href="audio/Blok%206%20Ik%20ga%20werken.mp3" data-dur="2:56">Ik ga werken</a></li>
+      <li><a href="audio/Blok%207%20Ik%20beheer%20mijn%20financi%C3%ABn.mp3" data-dur="2:53">Ik beheer mijn financiën</a></li>
+      <li><a href="audio/Blok%208%20Ik%20ben%20verzekerd.mp3" data-dur="1:29">Ik ben verzekerd</a></li>
+      <li><a href="audio/Blok%209%20Ik%20ben%20digitaal%20vaardig.mp3" data-dur="2:03">Ik ben digitaal vaardig</a></li>
+    </ol>
+  </section>
+
+  <div class="note">
+    <b>Tip</b>
+    <p>Lees 20 minuten, neem dan 5 minuten pauze. Test jezelf daarna met de flashcards.</p>
+  </div>
+</main>
+
+<script>
+  function load(key, fallback) {
+    try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+    catch (e) { return fallback; }
+  }
+  function save(key, value) {
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+  }
+  var sizeBtn = document.getElementById("sizeBtn");
+  function applySize(big) {
+    document.documentElement.classList.toggle("big", big);
+    sizeBtn.textContent = big ? "Tekst kleiner" : "Tekst groter";
+    sizeBtn.setAttribute("aria-pressed", big);
+  }
+  var big = load("lori-study-big", false);
+  applySize(big);
+  sizeBtn.addEventListener("click", function () {
+    big = !big;
+    save("lori-study-big", big);
+    applySize(big);
+  });
+</script>
+<script src="../assets/luisteren.js"></script>
+</body>
+</html>

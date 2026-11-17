@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lori's studiemateriaal</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --card: #fff;
+    --tx: #1d1d22;
+    --mu: #55555f;
+    --bd: #e3e0d8;
+    --ex: #fff6dd;
+    --on-a: #fff;
+    --a: #1f8a5b;
+    --base: 19px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16161a;
+      --card: #202027;
+      --tx: #f1f0ec;
+      --mu: #b5b4bd;
+      --bd: #34343e;
+      --ex: #3a3320;
+      --on-a: #16161a;
+      --a: #5fd6a0;
+    }
+  }
+  html.big { --base: 22px; }
+
+  * { box-sizing: border-box; }
+  html { font-size: var(--base); -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: "Atkinson Hyperlegible", Verdana, sans-serif;
+    background: var(--bg);
+    color: var(--tx);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    word-spacing: 0.06em;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px 96px;
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--tx);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+
+  .topbar {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 24px;
+  }
+  .size-btn {
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    min-height: 44px;
+    padding: 0 16px;
+    background: var(--card);
+    color: var(--tx);
+    border: 2px solid var(--bd);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .size-btn:hover { border-color: var(--tx); }
+
+  h1 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
+    line-height: 1.12;
+    margin: 24px 0 12px;
+  }
+  .intro {
+    color: var(--mu);
+    font-size: 1.05rem;
+    max-width: 30em;
+    margin: 0;
+  }
+  h2 {
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    margin: 44px 0 14px;
+  }
+
+  /* Vakken */
+  .vakken { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .vak a {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 20px;
+    background: var(--card);
+    border: 2px solid var(--bd);
+    border-radius: 12px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .vak a:hover { border-color: var(--c, var(--a)); }
+  .vak b {
+    display: block;
+    font-family: Fraunces, Georgia, serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
+  .vak .desc { display: block; color: var(--mu); font-size: 0.9rem; margin-top: 4px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 6px;
+    background: var(--bg);
+    border: 1px solid var(--bd);
+  }
+  .go {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--on-a);
+    background: var(--c, var(--a));
+    border-radius: 8px;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+
+  .soon {
+    border: 2px dashed var(--bd);
+    border-radius: 12px;
+    padding: 18px 20px;
+    color: var(--mu);
+    font-size: 0.95rem;
+  }
+  .soon b { color: var(--tx); display: block; }
+
+  @media (max-width: 540px) {
+    html { --base: 18px; }
+    html.big { --base: 21px; }
+    main { padding: 0 16px 80px; }
+    .vak a { grid-template-columns: 1fr; }
+    .go { justify-self: start; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="topbar">
+    <button class="size-btn" id="sizeBtn" type="button" aria-pressed="false">Tekst groter</button>
+  </div>
+
+  <h1>Lori's studiemateriaal</h1>
+  <p class="intro">Kies een vak. Per vak vind je korte uitleg, audio om naar te luisteren en oefenvragen.</p>
+
+  <h2>Vakken</h2>
+  <!--
+    NIEUW VAK TOEVOEGEN: kopieer het hele <li class="vak">...</li> blok hieronder,
+    plak het eronder en pas de map (href), de naam en de beschrijving aan.
+  -->
+  <ul class="vakken">
+    <li class="vak" style="--c: var(--a)">
+      <a href="samenleving-en-economie/index.html">
+        <span>
+          <b>Samenleving en economie</b>
+          <span class="desc">Jezelf, samenleven, werken, geld, verzekeringen en digitaal</span>
+          <span class="tags"><span class="tag">9 blokken</span><span class="tag">Audio</span><span class="tag">Mind map</span><span class="tag">Flashcards</span></span>
+        </span>
+        <span class="go">Openen &rarr;</span>
+      </a>
+    </li>
+  </ul>
+
+  <h2>Binnenkort</h2>
+  <div class="soon">
+    <b>Er komen meer vakken bij.</b>
+    Nieuwe vakken komen hier te staan zodra ze klaar zijn.
+  </div>
+</main>
+
+<script>
+  function load(key, fallback) {
+    try { var v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; }
+    catch (e) { return fallback; }
+  }
+  function save(key, value) {
+    try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
+  }
+  var sizeBtn = document.getElementById("sizeBtn");
+  function applySize(big) {
+    document.documentElement.classList.toggle("big", big);
+    sizeBtn.textContent = big ? "Tekst kleiner" : "Tekst groter";
+    sizeBtn.setAttribute("aria-pressed", big);
+  }
+  var big = load("lori-study-big", false);
+  applySize(big);
+  sizeBtn.addEventListener("click", function () {
+    big = !big;
+    save("lori-study-big", big);
+    applySize(big);
+  });
+</script>
+</body>
+</html>
